@@ -18,6 +18,10 @@ body {
     margin: 50px auto;
 }
 
+header {
+    position: relative;
+}
+
 header .logo {
 
     font-weight: 700;
@@ -42,20 +46,84 @@ header ul.nav li:hover {
     opacity: 0.5;
 }
 
+header .shop-cart-button {
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+
+header .shop-cart-button:hover,
+header .shop-cart-button.active {
+    color: #dc3d3d;
+    transform: scale(1.25);
+}
+
+header .shop-cart {
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    width: 600px;
+    min-height: 100px;
+    background: #a19b9b;
+    -webkit-box-shadow: 0px 5px 31px 14px rgba(122, 0, 206, 0.2) inset;
+    -moz-box-shadow: 0px 5px 31px 14px rgba(122, 0, 206, 0.2) inset;
+    box-shadow: 0px 5px 31px 14px rgba(122, 0, 206, 0.2) inset;
+    -webkit-box-shadow: 0px 5px 24px 33px rgba(150, 149, 150, 0.2);
+    -moz-box-shadow: 0px 5px 24px 33px rgba(150, 149, 150, 0.2);
+    box-shadow: 0px 5px 24px 33px rgba(150, 149, 150, 0.2);
+    z-index: 1000;
+    border-radius: 10px 10px 10px 10px;
+}
+
 header .presentation {
     margin: 50px 0;
-    background: url('./img/bg2.jpg') no-repeat;
+    background: #fff;
     width: 100%;
-    height: 520px;
+    height: 600px;
     background-size: cover;
     background-position: center center;
-    background-blend-mode: multiply;
-    background-color: #871cab;
     position: relative;
+    border-radius: 10px 10px 10px 10px;
+    
+}
+
+.video {
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0px 5px 22px 23px rgba(163, 12, 172, 0.2);
+    -moz-box-shadow: 0px 5px 22px 23px rgba(163, 12, 172, 0.2);
+    box-shadow: 0px 5px 22px 23px rgba(163, 12, 172, 0.2);
+}
+header .bottom{
+    top: 732px;
+    background: #685f5f;
+    width: 100%;
+    height: 65px;
+    position: absolute;
+    z-index: 1000;
+    border-radius: 0px 0px 10px 10px;
+}
+header .bottom:after{
+    content: 'Отличных покупок ↝';
+    position: absolute;
+    left: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    
+    
+}
+header .bottom::before{
+    content: 'Скоро скидки не пропустите, а также новые игры ＾• ω •＾';
+    position: absolute;
+    left: 470px;
+    top: 15px;
+    font-size: 25px;
+    font-weight: 400;
 }
 
 header .presentation:after {
-    content: 'Лучшие товары для вашего дома';
+    content: 'Лучшие игры для вашего дома';
     position: absolute;
     top: 50px;
     left: 50px;
@@ -76,27 +144,74 @@ header .presentation:before {
     color: #7FFFD4;
 }
 
-main{
+main {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-main .item{
+
+main .item {
+    top: 125px;
     width: 30%;
     margin-bottom: 50px;
-    background: #000000;
+    background: #3c3c3c;
+    border-radius: 10px 10px 10px 10px;
     overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
 }
-main .item .img{
+
+main .item img {
     width: 100%;
-    border-radius: 10px 10px 0 0 ;
+    border-radius: 10px 10px 0 0;
     transition: transform 500ms ease;
+    cursor:pointer;
+
 }
-main .item .img:hover{
+
+main .item img:hover {
     transform: scale(1.05);
 }
-footer {
+
+main h2,
+main p,
+main b,
+main t {
+    margin: 10px 20px;
+    color: #ddd9d9
+}
+
+main b {
+    color: #5fa36a;
+}
+
+main .add-to-cart {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #ca5252;
+    width: 35px;
+    height: 35px;
     text-align: center;
-    margin: 100px;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 700;
+    transition: transform 500ms ease;
+}
+
+main .add-to-cart:hover {
+    transform: scale(1.5) translateY(-5px);
+}
+
+footer {
+    
+    background: #404863;
+    width: 250px;
+    background-position: center;
+    text-align: center;
+    margin: 100px 520px;
+    border-radius: 10px 10px 10px 10px;
 }
