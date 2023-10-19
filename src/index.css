@@ -58,13 +58,22 @@ header .shop-cart-button.active {
     color: #dc3d3d;
     transform: scale(1.25);
 }
+header .shop-cart .summa{
+    float:left;
+    width:100%;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+    
+}
 
 header .shop-cart {
     position: absolute;
     top: 45px;
     right: 0px;
     width: 600px;
-    min-height: 100px;
+    padding: 20px;
+    padding-bottom: 0;
     background: #a19b9b;
     -webkit-box-shadow: 0px 5px 31px 14px rgba(122, 0, 206, 0.2) inset;
     -moz-box-shadow: 0px 5px 31px 14px rgba(122, 0, 206, 0.2) inset;
@@ -72,8 +81,63 @@ header .shop-cart {
     -webkit-box-shadow: 0px 5px 24px 33px rgba(150, 149, 150, 0.2);
     -moz-box-shadow: 0px 5px 24px 33px rgba(150, 149, 150, 0.2);
     box-shadow: 0px 5px 24px 33px rgba(150, 149, 150, 0.2);
-    z-index: 1000;
+    z-index: 1000000;
     border-radius: 10px 10px 10px 10px;
+}
+
+header .shop-cart .empty h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+header .shop-cart .item {
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+    background: #3c3c3c;
+    border-radius: 10px 10px 10px 10px;
+
+}
+
+header .shop-cart .item img {
+    width: 200px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 10px 0px 0px 10px;
+    overflow: hidden;
+    transition: transform 500ms ease;
+    cursor: pointer;
+
+}
+header .shop-cart .item img:hover{
+    width: 200px;
+    border-radius: 10px 10px 10px 10px;
+    transform: scale(1.5);
+}
+
+header .shop-cart .item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+header .shop-cart .item b {
+    color: #00ff0d;
+    font-weight: 700;
+    position: absolute;
+    left: 500px;
+}
+
+header .shop-cart .item .delete-icon {
+    float: right ;
+    right: 15.5px;
+    position: relative;
+    top: auto;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+header .shop-cart .item .delete-icon:hover{
+    color: #dc3d3d;
+    transform: scale(1.65);
 }
 
 header .presentation {
@@ -85,7 +149,7 @@ header .presentation {
     background-position: center center;
     position: relative;
     border-radius: 10px 10px 10px 10px;
-    
+
 }
 
 .video {
@@ -95,7 +159,8 @@ header .presentation {
     -moz-box-shadow: 0px 5px 22px 23px rgba(163, 12, 172, 0.2);
     box-shadow: 0px 5px 22px 23px rgba(163, 12, 172, 0.2);
 }
-header .bottom{
+
+header .bottom {
     top: 732px;
     background: #685f5f;
     width: 100%;
@@ -104,16 +169,18 @@ header .bottom{
     z-index: 1000;
     border-radius: 0px 0px 10px 10px;
 }
-header .bottom:after{
+
+header .bottom:after {
     content: 'Отличных покупок ↝';
     position: absolute;
     left: 20px;
     font-size: 40px;
     font-weight: 700;
-    
-    
+
+
 }
-header .bottom::before{
+
+header .bottom::before {
     content: 'Скоро скидки не пропустите, а также новые игры ＾• ω •＾';
     position: absolute;
     left: 470px;
@@ -166,7 +233,7 @@ main .item img {
     width: 100%;
     border-radius: 10px 10px 0 0;
     transition: transform 500ms ease;
-    cursor:pointer;
+    cursor: pointer;
 
 }
 
@@ -207,7 +274,7 @@ main .add-to-cart:hover {
 }
 
 footer {
-    
+
     background: #404863;
     width: 250px;
     background-position: center;
