@@ -119,8 +119,9 @@ class App extends React.Component {
     )
   }
   chooseCategory(category){
+    const currentItems = category === 'all' ? this.state.items : this.state.items.filter(el => el.platform === category)
     this.setState({
-      currentItems: this.state.items.filter(el => el.category === category)
+      currentItems: currentItems
     })
   }
 

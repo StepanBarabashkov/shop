@@ -225,9 +225,10 @@ header .presentation:before {
     border: 1px solid transparent;
     transition: all 500ms ease;
 }
-.categories div:hover{
+.categories div:hover
+{
     border-color: silver;
-    transform: scale(1.1);
+    transform: scale(1.1) translateY(-5px) ;
 }
 
 main {
@@ -288,7 +289,8 @@ main .add-to-cart {
     transition: transform 500ms ease;
 }
 
-main .add-to-cart:hover {
+main .add-to-cart:hover
+ {
     transform: scale(1.5) translateY(-5px);
 }
 
