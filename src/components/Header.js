@@ -45,7 +45,7 @@ export default function Header(props) {
 
 
       </div>
-      <div className='presentation'><video className="video" muted autoplay={"autoplay"} preload="auto" loop><source src={require('./video/jake.mp4')} type="video/mp4" /></video></div>
+      <div className='presentation'><video className="video" muted autoPlay={"autoplay"} preload="auto" loop><source src={require('./video/jake.mp4')} type="video/mp4" /></video></div>
       <div className='bottom'><TbArrowDownRight /></div>
     </header>
   )

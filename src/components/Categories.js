@@ -28,14 +28,29 @@ export class Categories extends Component {
             ]
         }
     }
+    activeCategory = 'all'
     render() {
+
         return (
-            <div className='categories'>
+
+            <div className='categories' >
                 {this.state.categories.map(el => (
-                    <div key={el.key} onClick={() => this.props.chooseCategory(el.key)}>{el.name}</div>
+                    <div
+                        key={el.key}
+                        className={this.activeCategory === el.key ? 'on' : 'off'}
+                        onClick={() => this.chooseCategory(el.key)}>{el.name}
+                    </div>
                 ))}
             </div>
+
         )
+    }
+    chooseCategory(category) {
+        if (this.activeCategory === category) {
+            category = 'all'
+        }
+            this.activeCategory = category
+            this.props.chooseCategory(category)
     }
 }
 

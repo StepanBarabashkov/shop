@@ -225,9 +225,14 @@ header .presentation:before {
     border: 1px solid transparent;
     transition: all 500ms ease;
 }
-.categories div:hover
+.categories div.off:hover
 {
     border-color: silver;
+    transform: scale(1.1) translateY(-5px) ;
+}
+.categories div.on
+{
+    border-color: rgb(255, 0, 0);
     transform: scale(1.1) translateY(-5px) ;
 }
 
